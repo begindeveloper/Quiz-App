@@ -78,60 +78,81 @@ function clearStatusClass(element){
 }
 
 const questions = [{
-    question: 'what year did the Barbie movie premiere?',
+    question: 'What is the highest-grossing holiday movie of all time?',
     answers: [
-        {text: '2023', correct: true},
-        {text:'1985', correct: false},
+        {text:"It's a wonderful life", correct: false},
+        {text:'Elf', correct: false},
+        {text: 'Home Alone', correct: true},
+        {text:'Die Hard', correct: false}
     ],
-
-        question: 'what year did the Barbie movie premiere?',
+        question: 'What year did the Barbie movie with Margot Robbie premiere?',
         answers: [
             {text: '2023', correct: true},
             {text:'1985', correct: false},
+            {text:'1998', correct: false},
+            {text:'2005', correct: false}
         ],
             question: "What year did the movie, 'The Mummy' with Brendan Fraser premiere? ",
             answers: [
-                {text: '1999', correct: true},
                 {text:'2016', correct: false},
+                {text:'2001', correct: false},
+                {text:'1995', correct: false},
+                {text: '1999', correct: true}
             ],
             question: 'What is 10^2?',
             answers: [
+                {text:'10', correct: false},
+                {text:'5', correct: false},
                 {text: '100', correct: true},
-                {text:'1000', correct: false},
+                {text:'1000', correct: false}
             ],
             question: 'What planet is after Venus?',
             answers: [
-                {text: 'Earth', correct: true},
+                {text:'Pluto', correct: false},
                 {text:'Mercury', correct: false},
+                {text:'Mars', correct: false},
+                {text: 'Earth', correct: true}
             ],
             question: 'How many infinity stones are there?',
             answers: [
                 {text: '6', correct: true},
                 {text:'5', correct: false},
+                {text:'10', correct: false},
+                {text:'7', correct: false}
             ],
             question: 'What is the only food that cannot go bad?',
             answers: [
+                {text:'Peanut Butter', correct: false},
+                {text:'Canned Tuna', correct: false},
                 {text: 'Honey', correct: true},
-                {text:'Dark Chocolate', correct: false},
+                {text:'Dark Chocolate', correct: false}
             ],
             question: 'What is the heaviest organ in the human body',
             answers: [
+                {text:'Brain', correct: false},
                 {text: 'Liver', correct: true},
                 {text:'Heart', correct: false},
+                {text:'Large Intestines', correct: false}
             ],
             question: 'Who made the third most 3-pointers in the playoffs in NBA history?',
             answers: [
-                {text: 'Lebron James', correct: true},
                 {text:'Kevin Durant', correct: false},
+                {text:'JJ Reddick', correct: false},
+                {text: 'Lebron James', correct: true},
+                {text:'Kyle Korver', correct: false}
             ],
             question: 'What element does the chemical symbol Au stand for?',
             answers: [
                 {text: 'Gold', correct: true},
                 {text:'Silver', correct: false},
+                {text:'Carbon', correct: false},
+                {text:'Salt', correct: false}
             ],
             question: 'What river passes through NewOrleans, Louisiana?',
             answers: [
-                {text: 'Mississippi River', correct: true},
                 {text:'Atchafalaya River', correct: false},
+                {text:'Orleans River', correct: false},
+                {text:'Colorado River', correct: false},
+                {text: 'Mississippi River', correct: true}
             ]
 }]

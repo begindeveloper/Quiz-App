@@ -16,6 +16,7 @@ function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
+    score = 0 // initialize the score
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
@@ -50,6 +51,9 @@ function resetState(){
 function selectAnswer(e){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    if (correct) {
+        score += 10 // increase the score by 10 if the answer is correct
+    }
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach((button) =>{
         setStatusClass(button, button.dataset.correct)

@@ -22,6 +22,14 @@ body{
     background-color: hsl(var(--hue), 100%, 20%);
 }
 
+h1 span{
+    color: black;
+    font-size: 70px;
+    margin-bottom: 25px;
+    justify-content: center;
+    text-align: center;
+}
+
 body.correct{
     --hue: var(--hue-correct);
 }
@@ -83,4 +91,11 @@ body.wrong{
 
 .hide{
     display: none;
+}
+
+#score{
+    text-align: left;
+    width: max-content;
+    float: left;
+    font-size: 25px;
 }

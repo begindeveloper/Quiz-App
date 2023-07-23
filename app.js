@@ -2,14 +2,15 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionELement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons') // Corrected variable name
+const answerButtonsElement = document.getElementById('answer-buttons')
+const scoreElement = document.getElementById('score');
 
-let shuffledQuestions, currentQuestionIndex 
+let shuffledQuestions, currentQuestionIndex, score; 
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
-    setNextQuestion()
+    setNextQuestion();
 })
 
 function startGame() {
@@ -17,13 +18,14 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     score = 0 // initialize the score
+    scoreElement.innerText = score;
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
 
 function setNextQuestion(){
     resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showQuestion(question){
@@ -53,6 +55,7 @@ function selectAnswer(e){
     const correct = selectedButton.dataset.correct
     if (correct) {
         score += 10 // increase the score by 10 if the answer is correct
+        scoreElement.innerText = score; // Update the displayed score
     }
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach((button) =>{
@@ -62,7 +65,8 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        startButton.classList.remove('hide');
+        score = 0; // Reset the score when the quiz is completed
     }
 }
 
